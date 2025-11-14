@@ -4,6 +4,7 @@ timeout=60
 count=0
 while [ $count -lt $timeout ]; do
   if mysqladmin ping &>/dev/null; then
+    echo "MySQL is up"
     break
   fi
   count=$((count+1))
