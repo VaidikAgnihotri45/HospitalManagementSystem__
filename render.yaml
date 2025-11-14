@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: hospital-management-render
+    env: docker
+    branch: main
+    dockerfilePath: Dockerfile
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: DB_NAME
+        value: hospital_db
+      - key: DB_USER
+        value: hospital_user
+      - key: DB_PASS
+        value: Hospital@123
